@@ -1,14 +1,11 @@
 import { Funcion } from "./funcion/createFunction.js";
-import { Biseccion, FalsaPosicion, NewtonRaphson, Tartaglia_Cardano } from "./units/unidad2.js";
+import { Biseccion, FalsaPosicion, NewtonRaphson, Tartaglia_Cardano, Ferrari, Birge_Vieta } from "./units/unidad2.js";
 import { Gauss_Jordan, Jacobi, Gauss_Siedel, Montante } from "./units/unidad3.js";
+import { InterpolacionNewton, InterpolacionLagrange } from "./units/unidad4.js";
+import { DerivadaPorLimites, DerivadaPorDiferenciasFinitas, Trapecio, Simpson_1_3, Simpson_3_8} from "./units/unidad5.js";
 
-const numbers = [
-    [4, -1, 1, 3],
-    [-1, 4, 1, -2],
-    [2, 1, 5, 3]
-]
-// console.log(Gauss_Siedel(numbers, 0.001).modificaciones);
-// console.log(Jacobi(numbers, 0.001).modificaciones);
-// console.log(Montante(numbers));
-// console.log(Tartaglia_Cardano({a: 1, b: -9, c: 14, d: 24}));
+
+ console.log(InterpolacionNewton([1,1.5,2,2.5], [1, 1.6487, 2.7182, 7.3891], 1.7));
+
+
 

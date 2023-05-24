@@ -145,5 +145,82 @@ function Tartaglia_Cardano(coeficientes) {
         x3 : z3 - B / 3
     }
 }
+function Ferrari(coeficientes) {
+    const {a,b,c,d,e} = coeficientes;
+    const B = b/a;
+    const C = c/a;
+    const D = d/a;
+    const E = e/a;
+    // p y q
+    const p = (8*C - 3*math.pow(B, 2)) / 8;
+    const q = (8*D - 4*B*C + math.pow(B, 3)) / 8;
+    const r = (256*E - 64*B*D + 16*math.pow(B,2)*C - 3*math.pow(B,4)) / 256;
+    const coeficienteCubicaResolvente = {
+        a: 1,
+        b: 2*p,
+        c: math.pow(p, 2) - 4*r,
+        d: -math.pow(q, 2)
+    }
+    console.log(coeficienteCubicaResolvente);
+    const {x1, x2, x3} = Tartaglia_Cardano(coeficienteCubicaResolvente);
+    let y;
+    if(typeof x1 == "number" && x1 > 0) {
+        y = x1;
+    } else {
+        if(typeof x2 == "number" && x2 > 0) {
+            y = x2;
+        } else {
+            y = x3
+        }
+    }
+    const y1 = (math.sqrt(y)+math.sqrt(-y-2*p-2*q/math.sqrt(y)))/2 - B/4;
+    const y2 = (math.sqrt(y)-math.sqrt(-y-2*p-2*q/math.sqrt(y)))/2 - B/4;
+    const y3 = (-math.sqrt(y)+math.sqrt(-y-2*p+2*q/math.sqrt(y)))/2 - B/4;
+    const y4 = (-math.sqrt(y)-math.sqrt(-y-2*p+2*q/math.sqrt(y)))/2 - B/4;
+    return {
+        y1: y1,
+        y2: y2,
+        y3: y3,
+        y4: y4 
+    }
+}
+function Birge_Vieta(pol= "", p0 = 0, tol = 0, n_max = 0) {
+    // HALLAMOS EL GRADO DEL POLINOMIO
+    let aux = new Funcion(pol);
+    let grado = 0;
+    while(aux.expresion != "0") {
+        aux = new Funcion(
+            math.derivative(aux.expresion, "x").toString()
+        );
+        grado++;
+    }
+    grado--;
 
-export { Biseccion, FalsaPosicion, NewtonRaphson, Tartaglia_Cardano };
+    const resultados = [];
+    
+    // CONDICIONES INICIALES
+    let funcion = new Funcion(pol);
+    let derivada = new Funcion(
+        math.derivative(funcion.expresion, "x").toString()
+    );  
+    for (let i = 0; i < grado; i++) {
+        let e = 100;
+        let cont = 0;
+        let xi = p0;
+        while(e > tol && cont < n_max) {
+            const cociente = funcion.evaluate(xi) / derivada.evaluate(xi);
+            xi -= cociente;
+            e = math.abs(cociente);
+            cont++;
+        }
+        resultados.push(xi);
+        const div_sintetica = math.simplify(`(${funcion.expresion}) / (x-(${xi}))`).toString();
+        funcion = new Funcion(div_sintetica);
+        derivada = new Funcion(
+            math.derivative(funcion.expresion, "x").toString()
+        );
+    }
+    return resultados;
+}   
+
+export { Biseccion, FalsaPosicion, NewtonRaphson, Tartaglia_Cardano, Ferrari, Birge_Vieta };

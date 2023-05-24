@@ -46,7 +46,7 @@ body {
     border-radius: .5rem;
 }
 .nav li.active {
-    background: lightcoral;
+    background: rgb(107, 189, 162);
 }
 .content .calculator {
     position: relative;
@@ -67,26 +67,29 @@ body {
     left: 0;
     width: 100%;  
     display: none;
+    
 }
 .calculator .section.active {
     display: block;
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    
 }
 
 /* PANELES */
 .panel {
     width: 100%;
-    background-color: lightcoral;
 }
 .panel .panel__title {
     width: 100%;
-    background-color: red;
+    background-color: rgb(107, 189, 162);
     display: flex;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
     justify-content: space-between;
     align-items: center;
-    padding: .3rem 1rem;
+    padding: .9rem 1.5rem;
     cursor: pointer;
 }
 .panel__title .caret {
@@ -107,4 +110,5 @@ body {
 }
 .panel__content.active {
     display: block;
+    background-color: rgb(107, 189, 162);
 }
