@@ -604,6 +604,85 @@ function domDerivacionPorDiferenciasFinitas() {
         }
     })
 }
+// Integración
+function domTrapecio() {
+    const F = document.querySelector('.Trapecio .f');
+    const N = document.querySelector('.Trapecio .n');
+    const A = document.querySelector('.Trapecio .a');
+    const B = document.querySelector('.Trapecio .b');
+    const button = document.querySelector('.Trapecio .button');
+    const result = document.querySelector('.Trapecio .result');
+    button.addEventListener('click', () => {
+        const f = F.value.trim();
+        const n = N.value.trim();
+        const a = A.value.trim();
+        const b = B.value.trim();
+        if(result.hasChildNodes()) {
+            while(result.hasChildNodes()) {
+                result.remove(result.firstChild);
+            }           
+        } 
+        if(f+n+a+b != "") {
+            const res = Trapecio(f, parseFloat(n), parseFloat(a), parseFloat(b));
+            console.log(res);
+            const respuesta = document.createElement("DIV");
+            respuesta.textContent = `Respuesta ==> Integral_f(x)[${a},${b}] ==> ${res}`;
+            result.append(respuesta);
+        }
+    })
+}
+function domSimpson13() {
+    const F = document.querySelector('.Simpson13 .f');
+    const N = document.querySelector('.Simpson13 .n');
+    const A = document.querySelector('.Simpson13 .a');
+    const B = document.querySelector('.Simpson13 .b');
+    const button = document.querySelector('.Simpson13 .button');
+    const result = document.querySelector('.Simpson13 .result');
+    button.addEventListener('click', () => {
+        const f = F.value.trim();
+        const n = N.value.trim();
+        const a = A.value.trim();
+        const b = B.value.trim();
+        if(result.hasChildNodes()) {
+            while(result.hasChildNodes()) {
+                result.remove(result.firstChild);
+            }           
+        } 
+        if(f+n+a+b != "") {
+            const res = Simpson_1_3(f, parseFloat(n), parseFloat(a), parseFloat(b));
+            console.log(res);
+            const respuesta = document.createElement("DIV");
+            respuesta.textContent = `Respuesta ==> Integral_f(x)[${a},${b}] ==> ${res}`;
+            result.append(respuesta);
+        }
+    })
+}
+function domSimpson38() {
+    const F = document.querySelector('.Simpson38 .f');
+    const N = document.querySelector('.Simpson38 .n');
+    const A = document.querySelector('.Simpson38 .a');
+    const B = document.querySelector('.Simpson38 .b');
+    const button = document.querySelector('.Simpson38 .button');
+    const result = document.querySelector('.Simpson38 .result');
+    button.addEventListener('click', () => {
+        const f = F.value.trim();
+        const n = N.value.trim();
+        const a = A.value.trim();
+        const b = B.value.trim();
+        if(result.hasChildNodes()) {
+            while(result.hasChildNodes()) {
+                result.remove(result.firstChild);
+            }           
+        } 
+        if(f+n+a+b != "") {
+            const res = Simpson_3_8(f, parseFloat(n), parseFloat(a), parseFloat(b));
+            console.log(res);
+            const respuesta = document.createElement("DIV");
+            respuesta.textContent = `Respuesta ==> Integral_f(x)[${a},${b}] ==> ${res}`;
+            result.append(respuesta);
+        }
+    })
+}
 
 
 function domScripting() {
@@ -621,6 +700,10 @@ function domScripting() {
     domInterpolacionLagrange();
     domDerivacionPorLimites();
     domDerivacionPorDiferenciasFinitas();
+    domTrapecio();
+    domSimpson13();
+    domSimpson38();
+
 }
 
 export {domScripting};
