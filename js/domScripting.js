@@ -579,22 +579,24 @@ function domDerivacionPorLimites() {
     })
 }
 function domDerivacionPorDiferenciasFinitas() {
-    const F = document.querySelector('.Limite .f');
-    const X = document.querySelector('.Limite .x');
-    const tolerancia = document.querySelector('.Limite .tol');
-    const button = document.querySelector('.Limite .button');
-    const result = document.querySelector('.Limite .result');
+    const F = document.querySelector('.DiferenciasFinitas .f');
+    const X = document.querySelector('.DiferenciasFinitas .x');
+    const P0 = document.querySelector('.DiferenciasFinitas .p0');
+    const button = document.querySelector('.DiferenciasFinitas .button');
+    const result = document.querySelector('.DiferenciasFinitas .result');
     button.addEventListener('click', () => {
         const x  = X.value.trim();
         const f = F.value.trim();
-        const tol = tolerancia.value.trim();
+        const p0 = P0.value.trim();
         if(result.hasChildNodes()) {
             while(result.hasChildNodes()) {
                 result.remove(result.firstChild);
             }           
         } 
         if(x+f != "") {
-            const res = DerivadaPorDiferenciasFinitas(f, parseFloat(x), parseFloat(tol));
+            const xData = JSON.parse("["+x+"]");
+            const fData = JSON.parse("["+f+"]");
+            const res = DerivadaPorDiferenciasFinitas(xData, fData, parseFloat(p0));
             console.log(res);
             const respuesta = document.createElement("DIV");
             respuesta.textContent = `Respuesta ==> f'(${x}) = ${res}`;
@@ -618,6 +620,7 @@ function domScripting() {
     domInterpolacionNewton();
     domInterpolacionLagrange();
     domDerivacionPorLimites();
+    domDerivacionPorDiferenciasFinitas();
 }
 
 export {domScripting};

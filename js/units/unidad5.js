@@ -53,6 +53,7 @@ function DerivadaPorDiferenciasFinitas(x = [], y = [], p0) {
     const derivative = new Funcion(
         math.derivative(funcion.expresion, "x").toString()
     );
+    console.log(derivative.evaluate(p0))
     return derivative.evaluate(p0);
 }
 
