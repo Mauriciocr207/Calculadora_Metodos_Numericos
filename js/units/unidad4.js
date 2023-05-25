@@ -44,7 +44,6 @@ function InterpolacionLagrange(x = [], f = [], p0) {
                 num *= (p0 - x[j]);
                 den *= (x[i] - x[j]);
             }
-            console.log(num, den);
         }
         y += f[i] * num / den;
     }

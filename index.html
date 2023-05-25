@@ -98,11 +98,34 @@
                     </div>
                     <div class="panel NewtonRaphson">
                         <div class="panel__title">
-                            <h2>Método de la Bisección</h2>
+                            <h2>Método de Newton Raphson</h2>
                             <div class="caret"></div>
                         </div>
                         <div class="panel__content">
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates ipsa dolor aliquid sequi magnam quod accusantium dolorum. Exercitationem quas dolore deleniti nobis, sed laudantium ipsa perferendis molestiae tempore blanditiis nam et quo quaerat aliquam sunt harum fugiat! Quasi sapiente facilis adipisci repudiandae soluta exercitationem impedit nihil fugit ea a excepturi molestias deleniti officiis, eligendi minima doloremque repellendus amet nemo quidem numquam dolorum, cum accusamus nesciunt eum? Mollitia eligendi quae doloribus nihil ipsum soluta veritatis, labore quam iure, accusantium, quod velit pariatur. Aut debitis possimus, temporibus quidem quia ipsa facilis earum, voluptatibus aliquam ipsum animi molestiae culpa distinctio, voluptatum sunt eaque?</p>
+                            <div class="inputs">
+                                <div class="input">
+                                    <h3>Ingresa una función</h3>
+                                    <input type="text" name="" id="" placeholder="Ingresa una función. Ej: x^2+5x-1" class="funcion">
+                                </div>
+                                <div class="input">
+                                    <h3>Valor inicial</h3>
+                                    <input type="number" placeholder="Ej: 1" class="inicial">
+                                </div>
+                                <div class="input">
+                                    <h3>Tolerancia</h3>
+                                    <input type="number" placeholder="Ej: 0.01" class="tol">
+                                </div>
+                                <div class="input">
+                                    <h3>Máx. Iteraciones</h3>
+                                    <input type="number" placeholder="Ej: 20" class="iter">
+                                </div>
+                            </div>
+                            <div class="button">
+                                <button class="button">
+                                    Calcular
+                                </button>
+                            </div>
+                            <div class="result"></div>
                         </div>
                     </div>
                 </div>
@@ -110,29 +133,104 @@
                     <h1>Ec. Polinomiales</h1>
                     <div class="panel Tartaglia">
                         <div class="panel__title">
-                            <h2>Método de la Bisección</h2>
+                            <h2>Método de la Tartaglia Cardano</h2>
                             <div class="caret"></div>
                         </div>
                         <div class="panel__content">
-                            
+                            <h3>Ingresa los coeficientes del polinomio</h3>
+                            <div class="inputs">
+                                <div class="input">
+                                    <h3>a: </h3>
+                                    <input type="text" name="" id="" placeholder="Ej: 2" class="a">
+                                </div>
+                                <div class="input">
+                                    <h3>b: </h3>
+                                    <input type="text" name="" id="" placeholder="Ej: 4" class="b">
+                                </div>
+                                <div class="input">
+                                    <h3>c: </h3>
+                                    <input type="text" name="" id="" placeholder="Ej: 6" class="c">
+                                </div>
+                                <div class="input">
+                                    <h3>d: </h3>
+                                    <input type="text" name="" id="" placeholder="Ej: 5" class="d">
+                                </div>
+                            </div>
+                            <div class="button">
+                                <button class="button">
+                                    Calcular
+                                </button>
+                            </div>
+                            <div class="result"></div>
                         </div>
                     </div>
                     <div class="panel Ferrari">
                         <div class="panel__title">
-                            <h2>Método de la Bisección</h2>
+                            <h2>Método de Ferrari</h2>
                             <div class="caret"></div>
                         </div>
                         <div class="panel__content">
-                            
+                            <h3>Ingresa los coeficientes del polinomio</h3>
+                            <div class="inputs">
+                                <div class="input">
+                                    <h3>a: </h3>
+                                    <input type="text" name="" id="" placeholder="Ej: 2" class="a">
+                                </div>
+                                <div class="input">
+                                    <h3>b: </h3>
+                                    <input type="text" name="" id="" placeholder="Ej: 4" class="b">
+                                </div>
+                                <div class="input">
+                                    <h3>c: </h3>
+                                    <input type="text" name="" id="" placeholder="Ej: 6" class="c">
+                                </div>
+                                <div class="input">
+                                    <h3>d: </h3>
+                                    <input type="text" name="" id="" placeholder="Ej: 5" class="d">
+                                </div>
+                                <div class="input">
+                                    <h3>e: </h3>
+                                    <input type="text" name="" id="" placeholder="Ej: 5" class="e">
+                                </div>
+                            </div>
+                            <div class="button">
+                                <button class="button">
+                                    Calcular
+                                </button>
+                            </div>
+                            <div class="result"></div>
                         </div>
                     </div>
                     <div class="panel BirgeVieta">
                         <div class="panel__title">
-                            <h2>Método de la Bisección</h2>
+                            <h2>Método de Birge Vieta</h2>
                             <div class="caret"></div>
                         </div>
                         <div class="panel__content">
-                            
+                            <div class="inputs">
+                                <div class="input">
+                                    <h3>Ingresa un polinomio: </h3>
+                                    <input type="text" name="" id="" placeholder="Ej: x^3-5x^2+2x+1" class="pol">
+                                </div>
+                                <div class="input">
+                                    <h3>Valor inicial: </h3>
+                                    <input type="text" name="" id="" placeholder="Ej: 0" class="inicial">
+                                </div>
+                                <div class="input">
+                                    <h3>Tolerancia: </h3>
+                                    <input type="text" name="" id="" placeholder="Ej: 0.01" class="tol">
+                                </div>
+                                <div class="input">
+                                    <h3>Máx. Iteraciones: </h3>
+                                    <input type="text" name="" id="" placeholder="Ej: 20" class="iter">
+                                </div>
+                            </div>
+                            <div class="button">
+                                <button class="button">
+                                    Calcular
+                                </button>
+                            </div>
+                            <div class="result"></div>
                         </div>
                     </div>
                 </div>
@@ -140,38 +238,122 @@
                     <h1>Sistemas de Ecuaciones</h1>
                     <div class="panel GaussJordan">
                         <div class="panel__title">
-                            <h2>Método de la Bisección</h2>
+                            <h2>Método de Gauss Jordan</h2>
                             <div class="caret"></div>
                         </div>
                         <div class="panel__content">
-                            
+                            <div class="inputsArray">
+                                <div class="input">
+                                    <h3>Ingresa tu matriz</h3>
+                                    <p>Para ingresar una matriz escribe: [2,1,-1],[-1,5,-4],[3,-2,23]</p>
+                                    <p>Asegúrate de que la matriz sea cuadrada</p>
+                                    <input type="text" placeholder="Ingresa tu matriz: Ej. [2,1,-1],[-1,5,-4],[3,-2,23]" class="matriz">
+                                </div>
+                                <div class="input">
+                                    <h3>Ingresa vector respuesta</h3>
+                                    <p>Para ingresar un vector respuesta escribe: [-3,2,4]</p>
+                                    <p></p>
+                                    <input type="text" placeholder="Ingresa tu matriz: Ej. [-3,2,4]" class="vector_respuesta">
+                                </div>
+                            </div>
+                            <div class="button">
+                                <button class="button">
+                                    Calcular
+                                </button>
+                            </div>
+                            <div class="result"></div>
                         </div>
                     </div>
                     <div class="panel Jacobi">
                         <div class="panel__title">
-                            <h2>Método de la Bisección</h2>
+                            <h2>Método de Jacobi</h2>
                             <div class="caret"></div>
                         </div>
                         <div class="panel__content">
-                            
+                            <div class="inputsArray">
+                                <div class="input">
+                                    <h3>Ingresa tu matriz</h3>
+                                    <p>Para ingresar una matriz escribe: [2,1,-1],[-1,5,-4],[3,-2,23]</p>
+                                    <p>Asegúrate de que la matriz sea cuadrada</p>
+                                    <input type="text" placeholder="Ingresa tu matriz: Ej. [2,1,-1],[-1,5,-4],[3,-2,23]" class="matriz">
+                                </div>
+                                <div class="input">
+                                    <h3>Ingresa vector respuesta</h3>
+                                    <p>Para ingresar un vector respuesta escribe: [-3,2,4]</p>
+                                    <p></p>
+                                    <input type="text" placeholder="Ingresa tu matriz: Ej. [-3,2,4]" class="vector_respuesta">
+                                </div>
+                                <div class="input">
+                                    <h3>Tolerancia</h3>
+                                    <input type="text" placeholder="Ej. 0.01" class="tol">
+                                </div>
+                            </div>
+                            <div class="button">
+                                <button class="button">
+                                    Calcular
+                                </button>
+                            </div>
+                            <div class="result"></div>
                         </div>
                     </div>
                     <div class="panel GaussSiedel">
                         <div class="panel__title">
-                            <h2>Método de la Bisección</h2>
+                            <h2>Método de Gauss Siedel</h2>
                             <div class="caret"></div>
                         </div>
                         <div class="panel__content">
-                            
+                            <div class="inputsArray">
+                                <div class="input">
+                                    <h3>Ingresa tu matriz</h3>
+                                    <p>Para ingresar una matriz escribe: [2,1,-1],[-1,5,-4],[3,-2,23]</p>
+                                    <p>Asegúrate de que la matriz sea cuadrada</p>
+                                    <input type="text" placeholder="Ingresa tu matriz: Ej. [2,1,-1],[-1,5,-4],[3,-2,23]" class="matriz">
+                                </div>
+                                <div class="input">
+                                    <h3>Ingresa vector respuesta</h3>
+                                    <p>Para ingresar un vector respuesta escribe: [-3,2,4]</p>
+                                    <p></p>
+                                    <input type="text" placeholder="Ingresa tu matriz: Ej. [-3,2,4]" class="vector_respuesta">
+                                </div>
+                                <div class="input">
+                                    <h3>Tolerancia</h3>
+                                    <input type="text" placeholder="Ej. 0.01" class="tol">
+                                </div>
+                            </div>
+                            <div class="button">
+                                <button class="button">
+                                    Calcular
+                                </button>
+                            </div>
+                            <div class="result"></div>
                         </div>
                     </div>
                     <div class="panel Montante">
                         <div class="panel__title">
-                            <h2>Método de la Bisección</h2>
+                            <h2>Método de Montante</h2>
                             <div class="caret"></div>
                         </div>
                         <div class="panel__content">
-                            
+                            <div class="inputsArray">
+                                <div class="input">
+                                    <h3>Ingresa tu matriz</h3>
+                                    <p>Para ingresar una matriz escribe: [2,1,-1],[-1,5,-4],[3,-2,23]</p>
+                                    <p>Asegúrate de que la matriz sea cuadrada</p>
+                                    <input type="text" placeholder="Ingresa tu matriz: Ej. [2,1,-1],[-1,5,-4],[3,-2,23]" class="matriz">
+                                </div>
+                                <div class="input">
+                                    <h3>Ingresa vector respuesta</h3>
+                                    <p>Para ingresar un vector respuesta escribe: [-3,2,4]</p>
+                                    <p></p>
+                                    <input type="text" placeholder="Ingresa tu matriz: Ej. [-3,2,4]" class="vector_respuesta">
+                                </div>
+                            </div>
+                            <div class="button">
+                                <button class="button">
+                                    Calcular
+                                </button>
+                            </div>
+                            <div class="result"></div>
                         </div>
                     </div>
                 </div>
@@ -179,71 +361,123 @@
                     <h1>Interpolación</h1>
                     <div class="panel InterpolacionNewton">
                         <div class="panel__title">
-                            <h2>Método de la Bisección</h2>
+                            <h2>Método de Interpolación de Newton</h2>
                             <div class="caret"></div>
                         </div>
                         <div class="panel__content">
-                            
+                            <div class="inputsArray">
+                                <div class="input">
+                                    <h3>Ingresa una serie de datos para f(x)</h3>
+                                    <p>Ej. 1, 1.6487, 2.7182, 7.3891</p>
+                                    <input type="text" placeholder="Ingresa tus datos: Ej. 3,2,4,1" class="f">
+                                </div>
+                                <div class="input">
+                                    <h3>Ingresa una serie de datos para x</h3>
+                                    <p>Ej. 1, 1.5, 2, 2.5</p>
+                                    <input type="text" placeholder="Ingresa tus datos: Ej. 3,2,4,1" class="x">
+                                </div>
+                                <div class="input">
+                                    <h3>Ingresa un valor x para interpolar un valor en f(x)</h3>
+                                    <p>Ej. 3</p>
+                                    <input type="text" placeholder="Ingresa un valor de x" class="p0">
+                                </div>
+                            </div>
+                            <div class="button">
+                                <button class="button">
+                                    Calcular
+                                </button>
+                            </div>
+                            <div class="result"></div>
                         </div>
                     </div>
                     <div class="panel InterpolacionLagrange">
                         <div class="panel__title">
-                            <h2>Método de la Bisección</h2>
+                            <h2>Método de Interpolación de Lagrange</h2>
                             <div class="caret"></div>
                         </div>
                         <div class="panel__content">
-                            
+                            <div class="inputsArray">
+                                <div class="input">
+                                    <h3>Ingresa una serie de datos para f(x)</h3>
+                                    <p>Ej. 1, 1.6487, 2.7182, 7.3891</p>
+                                    <input type="text" placeholder="Ingresa tus datos: Ej. 3,2,4,1" class="f">
+                                </div>
+                                <div class="input">
+                                    <h3>Ingresa una serie de datos para x</h3>
+                                    <p>Ej. 1, 1.5, 2, 2.5</p>
+                                    <input type="text" placeholder="Ingresa tus datos: Ej. 3,2,4,1" class="x">
+                                </div>
+                                <div class="input">
+                                    <h3>Ingresa un valor x para interpolar un valor en f(x)</h3>
+                                    <p>Ej. 3</p>
+                                    <input type="text" placeholder="Ingresa un valor de x" class="p0">
+                                </div>
+                            </div>
+                            <div class="button">
+                                <button class="button">
+                                    Calcular
+                                </button>
+                            </div>
+                            <div class="result"></div>
                         </div>
                     </div>
                 </div>
                 <div class="section">
                     <h1>Diferenciación</h1>
-                    <div class="panel Limites">
+                    <div class="panel Limite">
                         <div class="panel__title">
-                            <h2>Método de la Bisección</h2>
+                            <h2>Método de Derivación por Limites</h2>
                             <div class="caret"></div>
                         </div>
                         <div class="panel__content">
-                            
+                            <div class="inputs">
+                                <div class="input">
+                                    <h3>Ingresa una función: </h3>
+                                    <input type="text" name="" id="" placeholder="Ej: 4x^(4) + x^(3)- 5x^(2) + 2x+1" class="f">
+                                </div>
+                                <div class="input">
+                                    <h3>Valor x a evaluar: </h3>
+                                    <input type="text" name="" id="" placeholder="Ej: 0" class="x">
+                                </div>
+                                <div class="input">
+                                    <h3>Tolerancia: </h3>
+                                    <input type="text" name="" id="" placeholder="Ej: 0.01" class="tol">
+                                </div>
+                            </div>
+                            <div class="button">
+                                <button class="button">
+                                    Calcular
+                                </button>
+                            </div>
+                            <div class="result"></div>
                         </div>
                     </div>
                     <div class="panel DiferenciasFinitas">
                         <div class="panel__title">
-                            <h2>Método de la Bisección</h2>
+                            <h2>Método de Interpolación de Lagrange</h2>
                             <div class="caret"></div>
                         </div>
                         <div class="panel__content">
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="section">
-                    <h1>Integración</h1>
-                    <div class="panel Trapecio">
-                        <div class="panel__title">
-                            <h2>Método de la Bisección</h2>
-                            <div class="caret"></div>
-                        </div>
-                        <div class="panel__content">
-                            
-                        </div>
-                    </div>
-                    <div class="panel Simpson13">
-                        <div class="panel__title">
-                            <h2>Método de la Bisección</h2>
-                            <div class="caret"></div>
-                        </div>
-                        <div class="panel__content">
-                            
-                        </div>
-                    </div>
-                    <div class="panel Simpson38">
-                        <div class="panel__title">
-                            <h2>Método de la Bisección</h2>
-                            <div class="caret"></div>
-                        </div>
-                        <div class="panel__content">
-                            
+                            <div class="inputs">
+                                <div class="input">
+                                    <h3>Ingresa una función: </h3>
+                                    <input type="text" name="" id="" placeholder="Ej: 4x^(4) + x^(3)- 5x^(2) + 2x+1" class="f">
+                                </div>
+                                <div class="input">
+                                    <h3>Valor x a evaluar: </h3>
+                                    <input type="text" name="" id="" placeholder="Ej: 0" class="x">
+                                </div>
+                                <div class="input">
+                                    <h3>Tolerancia: </h3>
+                                    <input type="text" name="" id="" placeholder="Ej: 0.01" class="tol">
+                                </div>
+                            </div>
+                            <div class="button">
+                                <button class="button">
+                                    Calcular
+                                </button>
+                            </div>
+                            <div class="result"></div>
                         </div>
                     </div>
                 </div>

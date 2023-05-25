@@ -108,7 +108,10 @@ function NewtonRaphson(x_i, f = "", tol = 0, n_max = 0) {
             e_a: e_a
         });
     }
-    return results;
+    return {
+        x_r: x_r,
+        results: results
+    };
 }
 // ECUACIONES POLINOMIALES
 function Tartaglia_Cardano(coeficientes) {

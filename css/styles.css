@@ -137,9 +137,13 @@ body {
     outline: none;
     border: none;
 }
+.panel__content .inputsArray {
+    width: 100%;
+}
 .panel__content .button button {
     outline: none;
     border: none;
+    border-radius: .5rem;
     padding: .7rem;
     font-weight: bold;
     background-color: rgb(5, 131, 89);
@@ -159,5 +163,19 @@ body {
     max-height: 20rem;
     overflow-y: auto;
     font-size: 1.1rem;
+    font-weight: bold;
+}
+.result .vectorRespuesta {
+    font-size: 1.1rem;
+}
+.vectorRespuesta h4 {
+    font-weight: bold;
+}
+.result .proceso {
+    max-height: 20rem;
+    overflow-y: auto;
+    font-size: 1.1rem;
+}
+.proceso h4 {
     font-weight: bold;
 }

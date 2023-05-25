@@ -1,6 +1,6 @@
 import { Funcion } from "../funcion/createFunction.js";
 function Gauss_Jordan(arreglo = []) {
-    let matriz = arreglo;
+    let matriz = JSON.parse(JSON.stringify(arreglo));
     const n = matriz.length;
     const m = n + 1;
     const modificaciones = [];
@@ -52,6 +52,7 @@ function Jacobi(arreglo = [], tol) {
             }
             y[i] /= matriz[i][i];
             err = math.abs(x[i] - y[i]);
+            console.log(x[i], y[i]);
         }
         for (let i = 0; i < n; i++) {
             x[i] = y[i];
@@ -102,6 +103,7 @@ function Montante(arreglo = []) {
     const n = matriz.length;
     let pivote_ant = 1;
     const modificaciones = [];
+    const vector_respuesta = [];
     modificaciones.push(JSON.parse(JSON.stringify(matriz)));
     for (let k = 0; k < n; k++) {
         for (let i = 0; i < n; i++) {
@@ -118,7 +120,13 @@ function Montante(arreglo = []) {
         pivote_ant = matriz[k][k];
         modificaciones.push(JSON.parse(JSON.stringify(matriz)));
     }
+    for (let i = 0; i < n; i++) {
+        const i_n = modificaciones[modificaciones.length - 1][i][n];
+        const i_i = modificaciones[modificaciones.length - 1][i][i];
+        vector_respuesta.push(i_n / i_i);
+    }
     return {
+        vector_respuesta: vector_respuesta,
         modificaciones: modificaciones
     }
 }
