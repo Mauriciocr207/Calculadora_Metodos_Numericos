@@ -13,6 +13,7 @@ function domBiseccion() {
     const button = document.querySelector('.Biseccion .button');
     const result = document.querySelector('.Biseccion .result');
     button.addEventListener('click', () => {
+        
         const f = funcion.value.trim();
         const sup = superior.value.trim();
         const inf = inferior.value.trim();
@@ -20,7 +21,7 @@ function domBiseccion() {
         
         if(result.hasChildNodes()) {
             while(result.hasChildNodes()) {
-                result.remove(result.firstChild);
+                result.removeChild(result.firstChild);
             }  
         } 
         const box = document.createElement('DIV');
@@ -42,6 +43,7 @@ function domBiseccion() {
             box.appendChild(results);
         }
         result.appendChild(box);
+        console.log(box, result);
     })
 }
 function domFalsaPosicion() {
@@ -59,7 +61,7 @@ function domFalsaPosicion() {
         
         if(result.hasChildNodes()) {
             while(result.hasChildNodes()) {
-                result.remove(result.firstChild);
+                result.removeChild(result.firstChild);
             }  
         } 
         const box = document.createElement('DIV');
@@ -98,7 +100,7 @@ function domNewtonRaphson() {
         
         if(result.hasChildNodes()) {
             while(result.hasChildNodes()) {
-                result.remove(result.firstChild);
+                result.removeChild(result.firstChild);
             }  
         } 
         const box = document.createElement('DIV');
@@ -137,7 +139,7 @@ function domTartaglia() {
         const d = D.value.trim();
         if(result.hasChildNodes()) {
             while(result.hasChildNodes()) {
-                result.remove(result.firstChild);
+                result.removeChild(result.firstChild);
             }  
         } 
         const box = document.createElement('DIV');
@@ -174,7 +176,7 @@ function domFerrari() {
         const e = E.value.trim();
         if(result.hasChildNodes()) {
             while(result.hasChildNodes()) {
-                result.remove(result.firstChild);
+                result.removeChild(result.firstChild);
             }  
         } 
         const box = document.createElement('DIV');
@@ -211,7 +213,7 @@ function domBirgeVieta() {
         
         if(result.hasChildNodes()) {
             while(result.hasChildNodes()) {
-                result.remove(result.firstChild);
+                result.removeChild(result.firstChild);
             }  
         } 
         const box = document.createElement('DIV');
@@ -246,7 +248,7 @@ function domGaussJordan() {
         const textoVectorRespuesta = Vector_respuesta.value.trim();
         if(result.hasChildNodes()) {
             while(result.hasChildNodes()) {
-                result.remove(result.firstChild);
+                result.removeChild(result.firstChild);
             }  
         } 
         if(textoMatriz != "") {
@@ -313,7 +315,7 @@ function domJacobi() {
         const tol = tolerancia.value.trim();
         if(result.hasChildNodes()) {
             while(result.hasChildNodes()) {
-                result.remove(result.firstChild);
+                result.removeChild(result.firstChild);
             }  
         } 
         if(textoMatriz != "") {
@@ -380,7 +382,7 @@ function domGaussSiedel() {
         const tol = tolerancia.value.trim();
         if(result.hasChildNodes()) {
             while(result.hasChildNodes()) {
-                result.remove(result.firstChild);
+                result.removeChild(result.firstChild);
             }  
         } 
         if(textoMatriz != "") {
@@ -445,7 +447,7 @@ function domMontante() {
         const textoVectorRespuesta = Vector_respuesta.value.trim();
         if(result.hasChildNodes()) {
             while(result.hasChildNodes()) {
-                result.remove(result.firstChild);
+                result.removeChild(result.firstChild);
             }           
         } 
         if(textoMatriz != "") {
@@ -513,7 +515,7 @@ function domInterpolacionNewton() {
         const p0 = P0.value.trim();
         if(result.hasChildNodes()) {
             while(result.hasChildNodes()) {
-                result.remove(result.firstChild);
+                result.removeChild(result.firstChild);
             }           
         } 
         if(x+f != "") {
@@ -539,7 +541,7 @@ function domInterpolacionLagrange() {
         const p0 = P0.value.trim();
         if(result.hasChildNodes()) {
             while(result.hasChildNodes()) {
-                result.remove(result.firstChild);
+                result.removeChild(result.firstChild);
             }           
         } 
         if(x+f != "") {
@@ -566,7 +568,7 @@ function domDerivacionPorLimites() {
         const tol = tolerancia.value.trim();
         if(result.hasChildNodes()) {
             while(result.hasChildNodes()) {
-                result.remove(result.firstChild);
+                result.removeChild(result.firstChild);
             }           
         } 
         if(x+f != "") {
@@ -590,7 +592,7 @@ function domDerivacionPorDiferenciasFinitas() {
         const p0 = P0.value.trim();
         if(result.hasChildNodes()) {
             while(result.hasChildNodes()) {
-                result.remove(result.firstChild);
+                result.removeChild(result.firstChild);
             }           
         } 
         if(x+f != "") {
@@ -619,7 +621,7 @@ function domTrapecio() {
         const b = B.value.trim();
         if(result.hasChildNodes()) {
             while(result.hasChildNodes()) {
-                result.remove(result.firstChild);
+                result.removeChild(result.firstChild);
             }           
         } 
         if(f+n+a+b != "") {
@@ -645,7 +647,7 @@ function domSimpson13() {
         const b = B.value.trim();
         if(result.hasChildNodes()) {
             while(result.hasChildNodes()) {
-                result.remove(result.firstChild);
+                result.removeChild(result.firstChild);
             }           
         } 
         if(f+n+a+b != "") {
@@ -671,7 +673,7 @@ function domSimpson38() {
         const b = B.value.trim();
         if(result.hasChildNodes()) {
             while(result.hasChildNodes()) {
-                result.remove(result.firstChild);
+                result.removeChild(result.firstChild);
             }           
         } 
         if(f+n+a+b != "") {
@@ -703,7 +705,6 @@ function domScripting() {
     domTrapecio();
     domSimpson13();
     domSimpson38();
-
 }
 
 export {domScripting};

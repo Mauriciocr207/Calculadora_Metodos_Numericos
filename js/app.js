@@ -46,4 +46,4 @@ function app() {
     deployPanel();
     domScripting();
 }
-window.onload = app();
+window.addEventListener('DOMContentLoaded', () => app());
