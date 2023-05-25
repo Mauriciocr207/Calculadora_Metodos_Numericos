@@ -24,6 +24,7 @@
                 <li class="active">Ec. Trascendentales</li>
                 <li>Ec. Polinomiales</li>
                 <li>Sistemas de Ecuaciones</li>
+                <li>Interpolación</li>
                 <li>Diferenciación</li>
                 <li>Integración</li>
             </nav>
@@ -31,16 +32,71 @@
                 <div class="section active">
                     <h1>Ec. Trascendentales</h1>
 
-                    <div class="panel">
+                    <div class="panel Biseccion">
                         <div class="panel__title">
-                            <h2>Método de Bisecciones Sucesivas</h2>
+                            <h2>Método de la Bisección</h2>
                             <div class="caret"></div>
                         </div>
                         <div class="panel__content">
-                            
+                            <div class="inputs">
+                                <div class="input">
+                                    <h3>Ingresa una función</h3>
+                                    <input type="text" name="" id="" placeholder="Ingresa una función. Ej: x^2+5x-1" class="funcion">
+                                </div>
+                                <div class="input">
+                                    <h3>Límite inferior</h3>
+                                    <input type="number" placeholder="Ej: 10" class="inf">
+                                </div>
+                                <div class="input">
+                                    <h3>Tolerancia</h3>
+                                    <input type="number" placeholder="Ej: 0.01" class="tol">
+                                </div>
+                                <div class="input">
+                                    <h3>Límite superior</h3>
+                                    <input type="number" placeholder="Ej: 20" class="sup">
+                                </div>
+                            </div>
+                            <div class="button">
+                                <button class="button">
+                                    Calcular
+                                </button>
+                            </div>
+                            <div class="result"></div>
                         </div>
                     </div>
-                    <div class="panel">
+                    <div class="panel FalsaPosicion">
+                        <div class="panel__title">
+                            <h2>Método de Falsa Posicion</h2>
+                            <div class="caret"></div>
+                        </div>
+                        <div class="panel__content">
+                            <div class="inputs">
+                                <div class="input">
+                                    <h3>Ingresa una función</h3>
+                                    <input type="text" name="" id="" placeholder="Ingresa una función. Ej: x^2+5x-1" class="funcion">
+                                </div>
+                                <div class="input">
+                                    <h3>Límite inferior</h3>
+                                    <input type="number" placeholder="Ej: 10" class="inf">
+                                </div>
+                                <div class="input">
+                                    <h3>Tolerancia</h3>
+                                    <input type="number" placeholder="Ej: 0.01" class="tol">
+                                </div>
+                                <div class="input">
+                                    <h3>Límite superior</h3>
+                                    <input type="number" placeholder="Ej: 20" class="sup">
+                                </div>
+                            </div>
+                            <div class="button">
+                                <button class="button">
+                                    Calcular
+                                </button>
+                            </div>
+                            <div class="result"></div>
+                        </div>
+                    </div>
+                    <div class="panel NewtonRaphson">
                         <div class="panel__title">
                             <h2>Método de la Bisección</h2>
                             <div class="caret"></div>
@@ -52,15 +108,144 @@
                 </div>
                 <div class="section">
                     <h1>Ec. Polinomiales</h1>
+                    <div class="panel Tartaglia">
+                        <div class="panel__title">
+                            <h2>Método de la Bisección</h2>
+                            <div class="caret"></div>
+                        </div>
+                        <div class="panel__content">
+                            
+                        </div>
+                    </div>
+                    <div class="panel Ferrari">
+                        <div class="panel__title">
+                            <h2>Método de la Bisección</h2>
+                            <div class="caret"></div>
+                        </div>
+                        <div class="panel__content">
+                            
+                        </div>
+                    </div>
+                    <div class="panel BirgeVieta">
+                        <div class="panel__title">
+                            <h2>Método de la Bisección</h2>
+                            <div class="caret"></div>
+                        </div>
+                        <div class="panel__content">
+                            
+                        </div>
+                    </div>
                 </div>
                 <div class="section">
                     <h1>Sistemas de Ecuaciones</h1>
+                    <div class="panel GaussJordan">
+                        <div class="panel__title">
+                            <h2>Método de la Bisección</h2>
+                            <div class="caret"></div>
+                        </div>
+                        <div class="panel__content">
+                            
+                        </div>
+                    </div>
+                    <div class="panel Jacobi">
+                        <div class="panel__title">
+                            <h2>Método de la Bisección</h2>
+                            <div class="caret"></div>
+                        </div>
+                        <div class="panel__content">
+                            
+                        </div>
+                    </div>
+                    <div class="panel GaussSiedel">
+                        <div class="panel__title">
+                            <h2>Método de la Bisección</h2>
+                            <div class="caret"></div>
+                        </div>
+                        <div class="panel__content">
+                            
+                        </div>
+                    </div>
+                    <div class="panel Montante">
+                        <div class="panel__title">
+                            <h2>Método de la Bisección</h2>
+                            <div class="caret"></div>
+                        </div>
+                        <div class="panel__content">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="section">
+                    <h1>Interpolación</h1>
+                    <div class="panel InterpolacionNewton">
+                        <div class="panel__title">
+                            <h2>Método de la Bisección</h2>
+                            <div class="caret"></div>
+                        </div>
+                        <div class="panel__content">
+                            
+                        </div>
+                    </div>
+                    <div class="panel InterpolacionLagrange">
+                        <div class="panel__title">
+                            <h2>Método de la Bisección</h2>
+                            <div class="caret"></div>
+                        </div>
+                        <div class="panel__content">
+                            
+                        </div>
+                    </div>
                 </div>
                 <div class="section">
                     <h1>Diferenciación</h1>
+                    <div class="panel Limites">
+                        <div class="panel__title">
+                            <h2>Método de la Bisección</h2>
+                            <div class="caret"></div>
+                        </div>
+                        <div class="panel__content">
+                            
+                        </div>
+                    </div>
+                    <div class="panel DiferenciasFinitas">
+                        <div class="panel__title">
+                            <h2>Método de la Bisección</h2>
+                            <div class="caret"></div>
+                        </div>
+                        <div class="panel__content">
+                            
+                        </div>
+                    </div>
                 </div>
                 <div class="section">
                     <h1>Integración</h1>
+                    <div class="panel Trapecio">
+                        <div class="panel__title">
+                            <h2>Método de la Bisección</h2>
+                            <div class="caret"></div>
+                        </div>
+                        <div class="panel__content">
+                            
+                        </div>
+                    </div>
+                    <div class="panel Simpson13">
+                        <div class="panel__title">
+                            <h2>Método de la Bisección</h2>
+                            <div class="caret"></div>
+                        </div>
+                        <div class="panel__content">
+                            
+                        </div>
+                    </div>
+                    <div class="panel Simpson38">
+                        <div class="panel__title">
+                            <h2>Método de la Bisección</h2>
+                            <div class="caret"></div>
+                        </div>
+                        <div class="panel__content">
+                            
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

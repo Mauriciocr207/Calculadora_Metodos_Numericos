@@ -1,5 +1,7 @@
 'use strict';
 
+import { domScripting } from "./domScripting.js";
+
 
 function changeSection() {
     const buttons = document.querySelectorAll('li');
@@ -42,5 +44,6 @@ function deployPanel() {
 function app() {
     changeSection();
     deployPanel();
+    domScripting();
 }
 window.onload = app();
